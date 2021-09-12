@@ -1,0 +1,37 @@
+[
+    {
+        "id"    : "0001",
+        "name"  : "Bailey",
+        "type"  : "Dog",
+        "age"   : 3,
+        "color" : "white"
+    },
+    {
+        "id"    : "0002",
+        "name"  : "Mopi",
+        "type"  : "Dog",
+        "age"   : 5,
+        "color" : "black"
+    },
+    {
+        "id"    : "0003",
+        "name"  : "Birdie",
+        "type"  : "bird",
+        "age"   : 1,
+        "color" : "tri-color"
+    },
+    {
+        "id"    : "0004",
+        "name"  : "Bunny",
+        "type"  : "Rabbit",
+        "age"   : 3,
+        "color" : "Grey"
+    },
+    {
+        "id"    : "0005",
+        "name"  : "Ruby",
+        "type"  : "Cat",
+        "age"   : 2,
+        "color" : "White"
+    }
+]
