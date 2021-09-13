@@ -1,8 +1,6 @@
 const router = require('express').Router()
 const petsController = require('../controller/PetsController')
 
+router.post('/',petsController.createNewMemberBody)
 
-
-router.post('/',petsController.createNewMember)
-
-module.exports = router 
+module.exports = router

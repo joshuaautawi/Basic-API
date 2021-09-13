@@ -6,7 +6,7 @@ const getPetById = require('./getPetByIdRouter')
 const newMember = require('./newMemberRoute')
 const delMemberById = require('./deleteMemberRouter')
 const updateMemberById =require('./updateMemberByIdRouter')
-
+const createNewMemberBody = require('./createMemberBodyRouter')
 
 
 
@@ -17,7 +17,7 @@ router.use('/getdata',getPetById)
 router.use('/newmember',newMember)
 router.use('/delById',delMemberById)
 router.use('/updatemember',updateMemberById)
-
+router.use('/members',createNewMemberBody)
 
 
 module.exports = router

@@ -6,14 +6,21 @@ const PORT = process.env.PORT || 5002
 const env = process.env.NODE_ENV || 'development'
 const router = require('./routes/index')
 const cors = require('cors')
+var bodyParser = require('body-parser')
 
 app.use('/api',router)
-
-
-//Body parser
-app.use(cors())
 app.use(express.json())
-app.use(express.urlencoded({extended :false}))
+app.use(express.urlencoded({extended:true}))
+//Body parser
+
+// app.use(express.urlencoded({extended:true}));
+
+// app.use(express.urlencoded({extended :true}))
+// app.use(bodyParser.json())
+// parse application/x-www-form-urlencoded
+// app.use(bodyParser.urlencoded({ extended: false }))
+
+// parse application/json
 
 
 

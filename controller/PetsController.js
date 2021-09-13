@@ -86,5 +86,14 @@ class Pets{
             res.status(400).json(`Error has been occured`)
         }
     }
+
+    static createNewMemberBody(req,res){
+        console.log(req.body)
+        // const {id = 5} = req.body
+        
+        console.log(`ini masuk ke line 92 `)
+        return res.status(200).json(req.body)
+        
+    }
 }
 module.exports = Pets
