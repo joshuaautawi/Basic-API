@@ -88,11 +88,27 @@ class Pets{
     }
 
     static createNewMemberBody(req,res){
-        console.log(req.body)
-        // const {id = 5} = req.body
-        
-        console.log(`ini masuk ke line 92 `)
-        return res.status(200).json(req.body)
+        pets.push(req.body)
+        return res.status(200).json(pets)
+    }
+
+    static updateMemberByBody(req,res){
+        const {id =null ,name=null,type=null,age=null,color=null}= req.body
+      
+        try{
+            const findIndex = pets.findIndex(pet => pet.id == req.params.id)
+            id ? pets[findIndex].id = id : pets[findIndex].id
+            name ? pets[findIndex].name = name : pets[findIndex].name
+            type ? pets[findIndex].type = type : pets[findIndex].type
+            age ? pets[findIndex].age = age : pets[findIndex].age
+            color ? pets[findIndex].color = color : pets[findIndex].color
+            res.status(200).json(pets)
+        }
+        catch(e){
+            res.status(400).json("Error has occured")
+        }
+      
+
         
     }
 }

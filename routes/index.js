@@ -1,12 +1,13 @@
 const router = require('express').Router()
-const homeRouter = require('./homeRouter')
-const petsRouter = require('./petsRouter')
-const getAllPets = require('./getAllDataRouter')
-const getPetById = require('./getPetByIdRouter')
-const newMember = require('./newMemberRoute')
-const delMemberById = require('./deleteMemberRouter')
-const updateMemberById =require('./updateMemberByIdRouter')
-const createNewMemberBody = require('./createMemberBodyRouter')
+const homeRouter = require('./home.router')
+const petsRouter = require('./pets.router')
+const getAllPets = require('./getAllData.router')
+const getPetById = require('./getPetById.router')
+const newMember = require('./newMember.router')
+const delMemberById = require('./deleteMember.router')
+const updateMemberById =require('./updateMemberById.router')
+const createNewMemberBody = require('./createMemberBody.router')
+const updateMemberByBody = require('./updateMemberByBody.router')
 
 
 
@@ -18,6 +19,6 @@ router.use('/newmember',newMember)
 router.use('/delById',delMemberById)
 router.use('/updatemember',updateMemberById)
 router.use('/members',createNewMemberBody)
-
+router.use('/update',updateMemberByBody)
 
 module.exports = router
